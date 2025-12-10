@@ -21,11 +21,7 @@ public class Calculator {
     }
 
     public int sumAllOperation(int w) {
-        int a = sum(w);
-        int b = multiply(w);
-        int c = minus(w);
-        int d = devide(w);
-        return a + b + c + d;
+        return sum(w) + multiply(w) + minus(w) + devide(w);
     }
 
     public static void main(String[] args) {
