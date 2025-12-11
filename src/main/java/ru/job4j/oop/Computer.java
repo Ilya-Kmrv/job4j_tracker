@@ -23,10 +23,12 @@ public class Computer {
         this.ssd = ssd;
         this.cpu = cpu;
     }
+
     public Computer(int ssd, String cpu) {
         this.ssd = ssd;
         this.cpu = cpu;
     }
+
     public Computer(boolean multiMonitor, double ssd, String cpu) {
         this.multiMonitor = multiMonitor;
         this.ssd = (int) ssd;

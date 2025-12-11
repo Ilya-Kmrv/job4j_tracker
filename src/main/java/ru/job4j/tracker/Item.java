@@ -12,7 +12,7 @@ public class Item {
     }
 
     public Item(int id, String name) {
-        thus.id = id;
+        this.id = id;
         this.name = name;
     }
 

@@ -13,6 +13,7 @@ public class Error {
         this.status = status;
         this.message = message;
     }
+
     public static void main(String[] args) {
     Error err = new Error(true, 420, "всё ок");
     err.printInfo();
@@ -21,6 +22,7 @@ public class Error {
     Error def = new Error();
     def.printInfo();
 }
+
     public void printInfo() {
     System.out.println("Ошибка: " + active);
     System.out.println("Код: " + status);
