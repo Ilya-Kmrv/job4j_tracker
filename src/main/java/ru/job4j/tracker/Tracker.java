@@ -42,36 +42,38 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
+        if (item == null) {
+            return false;
+        }
         int index = indexOf(id);
         if (index != -1) {
-            item.setId(id);
+            item.setId(id);     // сохраняем старый id
             items[index] = item;
             return true;
         }
         return false;
     }
-
-    public void delete(int id) {
-        int index = indexOf(id);
-        if (index != -1) {
-            System.arraycopy(items, index + 1, items, index, size - index - 1);
-            items[size - 1] = null;
-            size--;
-        }
-    }
-
-    public static void main(String[] args) {
-        String[] names = {"Petr", null, "Ivan", "Stepan", "Fedor"};
-        System.arraycopy(names, 2, names, 1, 3);
-        System.out.println(Arrays.toString(names));
-    }
-
-    private int indexOf(int id) {
-        for (int index = 0; index < size; index++) {
-            if (items[index].getId() == id) {
-                return index;
+        public void delete ( int id){
+            int index = indexOf(id);
+            if (index != -1) {
+                System.arraycopy(items, index + 1, items, index, size - index - 1);
+                items[size - 1] = null;
+                size--;
             }
         }
-        return -1;
+
+        public static void main (String[]args){
+            String[] names = {"Petr", null, "Ivan", "Stepan", "Fedor"};
+            System.arraycopy(names, 2, names, 1, 3);
+            System.out.println(Arrays.toString(names));
+        }
+
+        private int indexOf ( int id){
+            for (int index = 0; index < size; index++) {
+                if (items[index].getId() == id) {
+                    return index;
+                }
+            }
+            return -1;
+        }
     }
-}
