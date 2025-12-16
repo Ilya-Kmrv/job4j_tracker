@@ -47,13 +47,13 @@ public class Tracker {
         return false;
     }
 
-        public static void main (String[]args){
+    public static void main(String[]args) {
             String[] names = {"Petr", null, "Ivan", "Stepan", "Fedor"};
             System.arraycopy(names, 2, names, 1, 3);
             System.out.println(Arrays.toString(names));
         }
 
-        private int indexOf ( int id){
+        private int indexOf(int id) {
             for (int index = 0; index < size; index++) {
                 if (items[index].getId() == id) {
                     return index;
