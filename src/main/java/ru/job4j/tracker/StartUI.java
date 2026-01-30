@@ -11,7 +11,7 @@ public class StartUI {
             System.out.print("Выбрать: ");
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 6) {
-                System.out.println("Завершение работы ");
+                System.out.println("Завершение работы");
             }
             if (select != 6) {
                 System.out.println("Пользователь выбрал: " + select);
