@@ -47,8 +47,8 @@ public class StartUI {
                 if (tracker.replace(id, item)) {
                     System.out.println("Заявка изменена успешно.");
                 } else {
-                    System.out.println("Ошибка замены заявки.");}
-
+                    System.out.println("Ошибка замены заявки.");
+                }
             } else if (select == 3) {
                 System.out.println("=== Удаление заявки ===");
                 System.out.print("Введите id: ");
@@ -61,9 +61,7 @@ public class StartUI {
     }
 
     private void showMenu() {
-        String[] menu = {"Добавить новую заявку", "Показать все заявки",
-                "Изменить заявку", "Удалить заявку", "Показать заявку по id",
-                "Показать заявки по имени", "Завершить программу"};
+        String[] menu = {"Добавить новую заявку", "Показать все заявки", "Изменить заявку", "Удалить заявку", "Показать заявку по id", "Показать заявки по имени", "Завершить программу"};
         System.out.println("Меню:");
         for (int i = 0; i < menu.length; i++) {
             System.out.println(i + ". " + menu[i]);
