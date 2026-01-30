@@ -35,12 +35,12 @@ public class Tracker {
 
     public boolean replace(int id, Item item) {
         int index = indexOf(id);
-        if (index != -1) {
-            item.setId(id);     // сохраняем старый id
+        boolean result = index != -1;
+        if (result) {
+            item.setId(id);
             items[index] = item;
-            return true;
         }
-        return false;
+        return result;
     }
 
     public static void main(String[]args) {
