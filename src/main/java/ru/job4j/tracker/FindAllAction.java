@@ -20,10 +20,11 @@ public class FindAllAction implements UserAction {
             for (Item item : items) {
                 output.println(item);
             }
-            return true;
+
         } else {
             output.println("Хранилище еще не содержит заявок");
-            return true;
+
         }
+        return true;
     }
 }

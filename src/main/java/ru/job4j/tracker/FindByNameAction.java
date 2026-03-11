@@ -21,10 +21,10 @@ public class FindByNameAction implements UserAction {
             for (Item item : items) {
                 System.out.println(item);
             }
-            return true;
         } else {
             output.println("Заявки с именем: " + name + " не найдены.");
             return true;
         }
+        return true;
     }
 }
