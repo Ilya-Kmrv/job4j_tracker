@@ -157,7 +157,7 @@ class StartUITest {
     @Test
     void whenFindIdTestOutputIsSuccessfully() {
         Tracker tracker = new Tracker();
-        Item one = tracker.add(new Item("test1"));
+        Item one = tracker.add(new Item("test"));
         Output output = new StubOutput();
         Input input = new MockInput(
                 new String[] {"0", String.valueOf(one.getId()), "1"}
