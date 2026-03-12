@@ -16,4 +16,12 @@ class FactorialTest {
                 });
         assertThat(exception.getMessage()).isEqualTo("Число должно быть больше нуля");
     }
+    @Test
+    public void whenSuccessfully() {
+        Factorial factorial = new Factorial();
+        int result = factorial.calc(5);
+        assertThat(result).isEqualTo(120);
+    }
+
+
 }
