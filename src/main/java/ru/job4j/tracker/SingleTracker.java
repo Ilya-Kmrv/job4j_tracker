@@ -4,6 +4,8 @@ public class SingleTracker {
 
     private static SingleTracker instance = null;
 
+    private final Tracker tracker = new Tracker();
+
     private SingleTracker() {
     }
 
@@ -13,8 +15,6 @@ public class SingleTracker {
         }
         return instance;
     }
-
-    private final Tracker tracker = new Tracker();
 
     public Item add(Item item) {
         return tracker.add(item);
@@ -37,6 +37,6 @@ public class SingleTracker {
     }
 
     public void delete(int id) {
-        delete(id);
+        tracker.delete(id);
     }
 }
