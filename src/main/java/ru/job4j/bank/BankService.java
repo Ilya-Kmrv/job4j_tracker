@@ -52,13 +52,12 @@ public class BankService {
         return null;
     }
 
-
     public boolean transferMoney(String sourcePassport, String sourceRequisite, String destinationPassport, String
             destinationRequisite, double amount) {
         boolean result = false;
         Account source = findByRequisite(sourcePassport, sourceRequisite);
         Account destination = findByRequisite(destinationPassport, destinationRequisite);
-        if (source != null && destination !=null && source.getBalance() >= amount){
+        if (source != null && destination != null && source.getBalance() >= amount) {
             source.setBalance(source.getBalance() - amount);
             destination.setBalance(destination.getBalance() + amount);
             result = true;
