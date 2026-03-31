@@ -6,18 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 public class BankService {
-    private final Map<User, List<Account>> users = new HashMap<>(); //Это поле содержит всех пользователей системы с привязанными к ним счетами
+    private final Map<User, List<Account>> users = new HashMap<>();
 
-    public void addUser(User user) {       //Этот метод должен добавить пользователя в систему:
-        //Чтобы добавить пользователя в систему можно использовать метод Map.put.
+    public void addUser(User user) {
         users.putIfAbsent(user, new ArrayList<>());
     }
 
     public void deleteUser(String passport) {
-        User user = findByPassport(passport);
-        if (user != null) {
-            users.remove(user);
-        }
+        users.remove(new User(passport, ""));
     }
 
     public void addAccount(String passport, Account account) {
