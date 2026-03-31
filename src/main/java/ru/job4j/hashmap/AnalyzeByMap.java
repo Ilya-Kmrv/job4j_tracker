@@ -62,10 +62,6 @@ public class AnalyzeByMap {
             studentList.add(new Label(pupil.name(), sum));
         }
 
-        if (studentList.isEmpty()) {
-            return null;
-        }
-
         studentList.sort(Comparator.naturalOrder());
         return studentList.get(studentList.size() - 1);
     }
@@ -82,10 +78,6 @@ public class AnalyzeByMap {
         List<Label> result = new ArrayList<>();
         for (Map.Entry<String, Integer> entry : subjectSum.entrySet()) {
             result.add(new Label(entry.getKey(), entry.getValue()));
-        }
-
-        if (result.isEmpty()) {
-            return null;
         }
 
         result.sort(Comparator.naturalOrder());
