@@ -11,7 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class SchoolTest {
     @Test
     public void whenCollectClassA() {
-        public void whenCollectClassA () {
             List<Student> students = List.of(
                     new Student(10, "Surname1"),
                     new Student(40, "Surname4"),
