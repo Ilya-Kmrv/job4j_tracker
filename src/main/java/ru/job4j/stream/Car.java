@@ -58,11 +58,11 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Brand:" + brand + ", " +
-                "Model:" + model + ", " +
-                "Created:" + created + ", " +
-                "Volume:" + volume + ", " +
-                "Color:" + color;
+        return "Brand:" + brand + ", "
+                + "Model:" + model + ", "
+                + "Created:" + created + ", "
+                + "Volume:" + volume + ", "
+                + "Color:" + color;
     }
 
     public static void main(String[] args) {

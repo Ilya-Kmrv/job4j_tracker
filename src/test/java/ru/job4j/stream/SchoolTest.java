@@ -28,7 +28,7 @@ public class SchoolTest {
         }
 
         @Test
-        public void whenCollectClassB () {
+        public void whenCollectClassB() {
             List<Student> students = List.of(
                     new Student(20, "Surname2"),
                     new Student(30, "Surname3"),
@@ -46,7 +46,7 @@ public class SchoolTest {
         }
 
         @Test
-        public void whenCollectClassV () {
+        public void whenCollectClassV() {
             List<Student> students = List.of(
                     new Student(10, "Surname1"),
                     new Student(30, "Surname3"),
